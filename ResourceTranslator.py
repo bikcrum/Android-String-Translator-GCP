@@ -7,15 +7,15 @@ warnings.filterwarnings("ignore", category=UserWarning)
 CREDENTIAL_FILE = 'project-service-account.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = CREDENTIAL_FILE
 
-from google.cloud import translate_v3beta1 as translate
+from google.cloud import translate
 
 client = translate.TranslationServiceClient()
 
 project_id = json.load(open(CREDENTIAL_FILE))['project_id']
 location = 'global'
 
-parent = client.location_path(project_id, location)
 
+parent = f"projects/{project_id}/locations/{location}"
 
 def get_all_langs():
     lang = []
