@@ -10,13 +10,15 @@
 2. Install this python package (if not installed).
     1. bs4
 3. Install the google client translation library `pip install --upgrade google-cloud-translate`
-4. Create service account in GCP 
 
 #### Steps:
 
-1. Clone and go to the project directory
-2. Paste above service account and rename to `project-service-account.json`
-3. Use this command ``python translator-for-android.py <source-string-file> <languages list>``
-4. Example ``python translator-for-android.py strings.xml fr`` or  ``python translator-for-android.py strings.xml fr,de,nl``
-5. To translate to all available languages just provide source string in the command
-6. After above operation you will get new translated file(s) in current directory
+1. Goto GCP console (https://console.cloud.google.com/) then under IAM & Admin click Service accounts. 
+2. Create service account and assign a role as project owner.
+3. Create key which will be downloaded into your computer.
+4. Clone and go to the project directory
+5. Put service account there and rename to `project-service-account.json`
+6. Use this command ``python translator-for-android.py <source-string-file> <languages list>``
+7. Example ``python translator-for-android.py strings.xml fr`` or  ``python translator-for-android.py strings.xml fr,de,nl``
+8. To translate to all available languages just provide source string in the command
+9. After above operation you will get new translated file(s) in current directory
