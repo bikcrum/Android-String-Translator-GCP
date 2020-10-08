@@ -1,5 +1,6 @@
-# Translator for Android string resource
+## Find iOS string translator here https://github.com/bikcrum/iOS-String-Translator-GCP
 
+# Translator for Android string resource
 
 ### How to bulk translate?
 
